@@ -1,7 +1,7 @@
 # TürkLogos telekom AI Agent - TEKNOFEST 2025
 
 <p align="center">
-  <img src="./images/logo.png" alt="TürkLogos Logo"/>
+  <img src="./logo.png" alt="TürkLogos Logo"/>
 </p>
 
 **#BilisimVadisi2025** | **Ekip: BERTeMaL** | **@AcikKaynakPlatformu**
@@ -12,10 +12,10 @@ Bu proje, TEKNOFEST 2025 **#BilisimVadisi2025** etkinliği kapsamında geliştir
 
 | Fotoğraf | İsim | Ünvan | Sosyal Medya |
 |---|---|---|---|
-| <img src="./images/emre_satir.jpeg" width="100"/> | Emre ŞATIR | Danışman |  |
-| <img src="./images/erdem_malkan.jpeg" width="100"/> | Erdem Altuğ MALKAN | Takım Kaptanı | [GitHub](https://github.com/altugmalkan) <br> [LinkedIn](https://www.linkedin.com/in/altuğ-malkan-80b8a4284/) |
-| <img src="./images/dilan_basboga.jpeg" width="100"/> | Dilan Elif BAŞBOĞA | Takım Üyesi | [GitHub](https://github.com/elifbasboga) <br> [LinkedIn](https://www.linkedin.com/in/dilan-elif-başboğa-573091276/) |
-| <img src="./images/ahmet_ucan.jpeg" width="100"/> | Ahmet Anıl UÇAN | Takım Üyesi | [GitHub](https://github.com/Anilf8) <br> [LinkedIn](https://www.linkedin.com/in/anıl-uçan-785336331/) |
+| <img src="./emre_satir.jpeg" width="100"/> | Emre ŞATIR | Danışman |  |
+| <img src="./erdem_malkan.jpeg" width="100"/> | Erdem Altuğ MALKAN | Takım Kaptanı | [GitHub](https://github.com/altugmalkan) <br> [LinkedIn](https://www.linkedin.com/in/altuğ-malkan-80b8a4284/) |
+| <img src="./dilan_basboga.jpeg" width="100"/> | Dilan Elif BAŞBOĞA | Takım Üyesi | [GitHub](https://github.com/elifbasboga) <br> [LinkedIn](https://www.linkedin.com/in/dilan-elif-başboğa-573091276/) |
+| <img src="./ahmet_ucan.jpeg" width="100"/> | Ahmet Anıl UÇAN | Takım Üyesi | [GitHub](https://github.com/Anilf8) <br> [LinkedIn](https://www.linkedin.com/in/anıl-uçan-785336331/) |
 
 
 ## Proje Genel Bakış
