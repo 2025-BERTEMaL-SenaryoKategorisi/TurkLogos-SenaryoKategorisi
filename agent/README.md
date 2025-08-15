@@ -1,7 +1,7 @@
 # TürkLogos telekom AI Agent - TEKNOFEST 2025
 
 <p align="center">
-  <img src="./images/logo.png" alt="TürkLogos Logo"/>
+  <img src="./logo.png" alt="TürkLogos Logo"/>
 </p>
 
 **#BilisimVadisi2025** | **Ekip: BERTeMaL** | **@AcikKaynakPlatformu**
@@ -12,10 +12,10 @@ Bu proje, TEKNOFEST 2025 **#BilisimVadisi2025** etkinliği kapsamında geliştir
 
 | Fotoğraf | İsim | Ünvan | Sosyal Medya |
 |---|---|---|---|
-| <img src="./images/emre_satir.jpeg" width="100"/> | Emre ŞATIR | Danışman |  |
-| <img src="./images/erdem_malkan.jpeg" width="100"/> | Erdem Altuğ MALKAN | Takım Kaptanı | [GitHub](https://github.com/altugmalkan) <br> [LinkedIn](https://www.linkedin.com/in/altuğ-malkan-80b8a4284/) |
-| <img src="./images/dilan_basboga.jpeg" width="100"/> | Dilan Elif BAŞBOĞA | Takım Üyesi | [GitHub](https://github.com/elifbasboga) <br> [LinkedIn](https://www.linkedin.com/in/dilan-elif-başboğa-573091276/) |
-| <img src="./images/ahmet_ucan.jpeg" width="100"/> | Ahmet Anıl UÇAN | Takım Üyesi | [GitHub](https://github.com/Anilf8) <br> [LinkedIn](https://www.linkedin.com/in/anıl-uçan-785336331/) |
+| <img src="./emre_satir.jpeg" width="100"/> | Emre ŞATIR | Danışman |  |
+| <img src="./erdem_malkan.jpeg" width="100"/> | Erdem Altuğ MALKAN | Takım Kaptanı | [GitHub](https://github.com/altugmalkan) <br> [LinkedIn](https://www.linkedin.com/in/altuğ-malkan-80b8a4284/) |
+| <img src="./dilan_basboga.jpeg" width="100"/> | Dilan Elif BAŞBOĞA | Takım Üyesi | [GitHub](https://github.com/elifbasboga) <br> [LinkedIn](https://www.linkedin.com/in/dilan-elif-başboğa-573091276/) |
+| <img src="./ahmet_ucan.jpeg" width="100"/> | Ahmet Anıl UÇAN | Takım Üyesi | [GitHub](https://github.com/Anilf8) <br> [LinkedIn](https://www.linkedin.com/in/anıl-uçan-785336331/) |
 
 
 ## Proje Genel Bakış
@@ -35,7 +35,7 @@ Ayrıca erişilebilirlik ilkesi gözetilerek geliştirilen sistem, toplumun tüm
 ## Sistem Mimarisi
 
 <p align="center">
-  <img src="./images/architecture.jpeg" alt="Sistem Mimarisi" width="400"/>
+  <img src="./architecture.jpeg" alt="Sistem Mimarisi" width="400"/>
 </p>
 
 ## AI Agent Özellikleri
@@ -94,6 +94,71 @@ Ayrıca erişilebilirlik ilkesi gözetilerek geliştirilen sistem, toplumun tüm
 - semantic_search()              # Vektör tabanlı semantik arama
 - function_calling()             # Harici API fonksiyon çağrısı
 ```
+
+##Repo yapısı
+TurkLogos-SenaryoKategorisi-main/
+│
+├── .gitignore                 → Git tarafından izlenmemesi gereken dosya/klasörler
+├── LICENSE                    → Lisans bilgisi
+├── README.md                  → Proje açıklaması, kurulum ve kullanım bilgileri
+├── agent_architecture.png     → Agent mimarisi görseli
+├── agent_architecture_diagram.png → Agent mimarisi diyagramı
+├── architecture.jpeg          → Sistem genel mimarisi görseli
+├── console_chat.py            → Konsol üzerinden chatbot ile etkileşim
+│
+├── data/                      → Senaryo verilerinin bulunduğu klasör
+│   ├── FAQ.txt                 → Sık sorulan sorular verisi
+│   ├── campaigns.txt           → Kampanya verisi
+│   ├── packages.txt            → Paket/ürün verisi
+│   └── policies.txt            → Şirket politikaları verisi
+│
+├── docker-compose.yml         → Servisleri Docker üzerinden çalıştırma ayarları
+├── env.example                → Ortam değişkenleri örnek dosyası
+│
+├── generate_clean_diagram.py  → Diyagram oluşturma (temiz versiyon)
+├── generate_diagram.py        → Diyagram oluşturma (standart versiyon)
+│
+├── graph/                     → Ana agent mantığının bulunduğu klasör
+│   ├── chains/                 → Farklı görev zincirleri
+│   │   ├── answer_grader.py        → Cevap doğruluk değerlendirme
+│   │   ├── generation_chain.py    → Yanıt üretim zinciri
+│   │   ├── hallucination_grader.py→ Halüsinasyon kontrolü
+│   │   ├── question_grader.py     → Soru kalitesi değerlendirme
+│   │   ├── retrieval_grader.py    → Bilgi getirme kalitesi değerlendirme
+│   │   └── router.py              → Soru yönlendirme
+│   │
+│   ├── memory/                 → Konuşma hafızası yönetimi
+│   │   ├── memory_nodes.py
+│   │   └── redis_client.py
+│   │
+│   ├── nodes/                  → Agent’in çalıştırdığı tekil görevler
+│   │   ├── function_calls.py       → Fonksiyon çağrıları
+│   │   ├── generation.py           → Yanıt üretimi
+│   │   ├── grade_answer.py         → Cevap puanlama
+│   │   ├── grade_documents.py      → Doküman puanlama
+│   │   ├── grade_questions.py      → Soru puanlama
+│   │   ├── reject_question.py      → Geçersiz soruları reddetme
+│   │   ├── retrieve.py             → Bilgi çekme
+│   │   └── route_question.py       → Soruyu yönlendirme
+│   │
+│   ├── graph.py                 → Agent graf yapısının ana dosyası
+│   └── state.py                  → Agent durum yönetimi
+│
+├── ingestion.py               → Veri yükleme/indeksleme süreci
+├── init-pgvector.sql           → PostgreSQL vektör eklentisi kurulumu
+├── init.sql                    → Veritabanı başlangıç şeması
+├── json_to_postgres.py         → JSON verisini PostgreSQL’e aktarma
+│
+├── main.py                     → Uygulamanın ana başlangıç noktası
+├── requirements.txt            → Python bağımlılık listesi
+│
+├── test_minimal.py             → Minimal test senaryosu
+├── test_pgvector.py            → PGVector entegrasyon testi
+│
+└── utils/
+    └── clear_cache.py          → Önbellek temizleme aracı
+
+
 
 ## Teknoloji Stack
 
