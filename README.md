@@ -95,6 +95,71 @@ Ayrıca erişilebilirlik ilkesi gözetilerek geliştirilen sistem, toplumun tüm
 - function_calling()             # Harici API fonksiyon çağrısı
 ```
 
+##Repo yapısı
+TurkLogos-SenaryoKategorisi-main/
+│
+├── .gitignore                 → Git tarafından izlenmemesi gereken dosya/klasörler
+├── LICENSE                    → Lisans bilgisi
+├── README.md                  → Proje açıklaması, kurulum ve kullanım bilgileri
+├── agent_architecture.png     → Agent mimarisi görseli
+├── agent_architecture_diagram.png → Agent mimarisi diyagramı
+├── architecture.jpeg          → Sistem genel mimarisi görseli
+├── console_chat.py            → Konsol üzerinden chatbot ile etkileşim
+│
+├── data/                      → Senaryo verilerinin bulunduğu klasör
+│   ├── FAQ.txt                 → Sık sorulan sorular verisi
+│   ├── campaigns.txt           → Kampanya verisi
+│   ├── packages.txt            → Paket/ürün verisi
+│   └── policies.txt            → Şirket politikaları verisi
+│
+├── docker-compose.yml         → Servisleri Docker üzerinden çalıştırma ayarları
+├── env.example                → Ortam değişkenleri örnek dosyası
+│
+├── generate_clean_diagram.py  → Diyagram oluşturma (temiz versiyon)
+├── generate_diagram.py        → Diyagram oluşturma (standart versiyon)
+│
+├── graph/                     → Ana agent mantığının bulunduğu klasör
+│   ├── chains/                 → Farklı görev zincirleri
+│   │   ├── answer_grader.py        → Cevap doğruluk değerlendirme
+│   │   ├── generation_chain.py    → Yanıt üretim zinciri
+│   │   ├── hallucination_grader.py→ Halüsinasyon kontrolü
+│   │   ├── question_grader.py     → Soru kalitesi değerlendirme
+│   │   ├── retrieval_grader.py    → Bilgi getirme kalitesi değerlendirme
+│   │   └── router.py              → Soru yönlendirme
+│   │
+│   ├── memory/                 → Konuşma hafızası yönetimi
+│   │   ├── memory_nodes.py
+│   │   └── redis_client.py
+│   │
+│   ├── nodes/                  → Agent’in çalıştırdığı tekil görevler
+│   │   ├── function_calls.py       → Fonksiyon çağrıları
+│   │   ├── generation.py           → Yanıt üretimi
+│   │   ├── grade_answer.py         → Cevap puanlama
+│   │   ├── grade_documents.py      → Doküman puanlama
+│   │   ├── grade_questions.py      → Soru puanlama
+│   │   ├── reject_question.py      → Geçersiz soruları reddetme
+│   │   ├── retrieve.py             → Bilgi çekme
+│   │   └── route_question.py       → Soruyu yönlendirme
+│   │
+│   ├── graph.py                 → Agent graf yapısının ana dosyası
+│   └── state.py                  → Agent durum yönetimi
+│
+├── ingestion.py               → Veri yükleme/indeksleme süreci
+├── init-pgvector.sql           → PostgreSQL vektör eklentisi kurulumu
+├── init.sql                    → Veritabanı başlangıç şeması
+├── json_to_postgres.py         → JSON verisini PostgreSQL’e aktarma
+│
+├── main.py                     → Uygulamanın ana başlangıç noktası
+├── requirements.txt            → Python bağımlılık listesi
+│
+├── test_minimal.py             → Minimal test senaryosu
+├── test_pgvector.py            → PGVector entegrasyon testi
+│
+└── utils/
+    └── clear_cache.py          → Önbellek temizleme aracı
+
+
+
 ## Teknoloji Stack
 
 ### **Backend (AI Agent)**
