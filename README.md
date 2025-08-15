@@ -95,69 +95,72 @@ Ayrıca erişilebilirlik ilkesi gözetilerek geliştirilen sistem, toplumun tüm
 - function_calling()             # Harici API fonksiyon çağrısı
 ```
 
-##Repo yapısı
+## Repo Yapısı
+
 TurkLogos-SenaryoKategorisi-main/
 │
-├── .gitignore                 → Git tarafından izlenmemesi gereken dosya/klasörler
-├── LICENSE                    → Lisans bilgisi
-├── README.md                  → Proje açıklaması, kurulum ve kullanım bilgileri
-├── agent_architecture.png     → Agent mimarisi görseli
-├── agent_architecture_diagram.png → Agent mimarisi diyagramı
-├── architecture.jpeg          → Sistem genel mimarisi görseli
-├── console_chat.py            → Konsol üzerinden chatbot ile etkileşim
+├── .gitignore
+├── LICENSE
+├── README.md
+├── agent_architecture.png
+├── agent_architecture_diagram.png
+├── architecture.jpeg
+├── console_chat.py
 │
-├── data/                      → Senaryo verilerinin bulunduğu klasör
-│   ├── FAQ.txt                 → Sık sorulan sorular verisi
-│   ├── campaigns.txt           → Kampanya verisi
-│   ├── packages.txt            → Paket/ürün verisi
-│   └── policies.txt            → Şirket politikaları verisi
+├── data/
+│ ├── FAQ.txt
+│ ├── campaigns.txt
+│ ├── packages.txt
+│ └── policies.txt
 │
-├── docker-compose.yml         → Servisleri Docker üzerinden çalıştırma ayarları
-├── env.example                → Ortam değişkenleri örnek dosyası
+├── docker-compose.yml
+├── env.example
 │
-├── generate_clean_diagram.py  → Diyagram oluşturma (temiz versiyon)
-├── generate_diagram.py        → Diyagram oluşturma (standart versiyon)
+├── generate_clean_diagram.py
+├── generate_diagram.py
 │
-├── graph/                     → Ana agent mantığının bulunduğu klasör
-│   ├── chains/                 → Farklı görev zincirleri
-│   │   ├── answer_grader.py        → Cevap doğruluk değerlendirme
-│   │   ├── generation_chain.py    → Yanıt üretim zinciri
-│   │   ├── hallucination_grader.py→ Halüsinasyon kontrolü
-│   │   ├── question_grader.py     → Soru kalitesi değerlendirme
-│   │   ├── retrieval_grader.py    → Bilgi getirme kalitesi değerlendirme
-│   │   └── router.py              → Soru yönlendirme
-│   │
-│   ├── memory/                 → Konuşma hafızası yönetimi
-│   │   ├── memory_nodes.py
-│   │   └── redis_client.py
-│   │
-│   ├── nodes/                  → Agent’in çalıştırdığı tekil görevler
-│   │   ├── function_calls.py       → Fonksiyon çağrıları
-│   │   ├── generation.py           → Yanıt üretimi
-│   │   ├── grade_answer.py         → Cevap puanlama
-│   │   ├── grade_documents.py      → Doküman puanlama
-│   │   ├── grade_questions.py      → Soru puanlama
-│   │   ├── reject_question.py      → Geçersiz soruları reddetme
-│   │   ├── retrieve.py             → Bilgi çekme
-│   │   └── route_question.py       → Soruyu yönlendirme
-│   │
-│   ├── graph.py                 → Agent graf yapısının ana dosyası
-│   └── state.py                  → Agent durum yönetimi
+├── graph/
+│ ├── chains/
+│ │ ├── answer_grader.py
+│ │ ├── generation_chain.py
+│ │ ├── hallucination_grader.py
+│ │ ├── question_grader.py
+│ │ ├── retrieval_grader.py
+│ │ └── router.py
+│ │
+│ ├── memory/
+│ │ ├── memory_nodes.py
+│ │ └── redis_client.py
+│ │
+│ ├── nodes/
+│ │ ├── function_calls.py
+│ │ ├── generation.py
+│ │ ├── grade_answer.py
+│ │ ├── grade_documents.py
+│ │ ├── grade_questions.py
+│ │ ├── reject_question.py
+│ │ ├── retrieve.py
+│ │ └── route_question.py
+│ │
+│ ├── graph.py
+│ └── state.py
 │
-├── ingestion.py               → Veri yükleme/indeksleme süreci
-├── init-pgvector.sql           → PostgreSQL vektör eklentisi kurulumu
-├── init.sql                    → Veritabanı başlangıç şeması
-├── json_to_postgres.py         → JSON verisini PostgreSQL’e aktarma
+├── ingestion.py
+├── init-pgvector.sql
+├── init.sql
+├── json_to_postgres.py
 │
-├── main.py                     → Uygulamanın ana başlangıç noktası
-├── requirements.txt            → Python bağımlılık listesi
+├── main.py
+├── requirements.txt
 │
-├── test_minimal.py             → Minimal test senaryosu
-├── test_pgvector.py            → PGVector entegrasyon testi
+├── test_minimal.py
+├── test_pgvector.py
 │
 └── utils/
-    └── clear_cache.py          → Önbellek temizleme aracı
+└── clear_cache.py
 
+
+---
 
 
 ## Teknoloji Stack
