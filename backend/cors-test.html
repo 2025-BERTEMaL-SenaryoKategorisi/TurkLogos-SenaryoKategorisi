@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CORS Test - Telecom API</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+      }
+      .result {
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      .success {
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+      }
+      .error {
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
+      }
+      button {
+        padding: 10px 20px;
+        margin: 10px 5px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      pre {
+        background-color: #f8f9fa;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Telecom API CORS Test</h1>
+    <p>
+      This page tests CORS functionality for the Telecom API running on
+      localhost:3000
+    </p>
+
+    <button onclick="testGetUsers()">Test GET Users</button>
+    <button onclick="testGetPackages()">Test GET Packages</button>
+    <button onclick="testUserPackageInfo()">Test User Package Info</button>
+    <button onclick="testCreateUser()">Test POST User</button>
+
+    <div id="results"></div>
+
+    <script>
+      const API_BASE = "http://localhost:3000";
+      const resultsDiv = document.getElementById("results");
+
+      function addResult(title, success, data) {
+        const div = document.createElement("div");
+        div.className = `result ${success ? "success" : "error"}`;
+        div.innerHTML = `
+                <h3>${title}</h3>
+                <pre>${JSON.stringify(data, null, 2)}</pre>
+            `;
+        resultsDiv.appendChild(div);
+      }
+
+      async function testGetUsers() {
+        try {
+          const response = await fetch(`${API_BASE}/api/v1/users`);
+          const data = await response.json();
+          addResult("GET Users - Success", true, data);
+        } catch (error) {
+          addResult("GET Users - Error", false, { error: error.message });
+        }
+      }
+
+      async function testGetPackages() {
+        try {
+          const response = await fetch(`${API_BASE}/api/v1/packages`);
+          const data = await response.json();
+          addResult("GET Packages - Success", true, data);
+        } catch (error) {
+          addResult("GET Packages - Error", false, { error: error.message });
+        }
+      }
+
+      async function testUserPackageInfo() {
+        try {
+          const response = await fetch(
+            `${API_BASE}/api/v1/user-info/1/package`
+          );
+          const data = await response.json();
+          addResult("GET User Package Info - Success", true, data);
+        } catch (error) {
+          addResult("GET User Package Info - Error", false, {
+            error: error.message,
+          });
+        }
+      }
+
+      async function testCreateUser() {
+        try {
+          const userData = {
+            customer_id: "TEST001",
+            phone_number: "+905559876543",
+            first_name: "Test",
+            last_name: "User",
+            email: "test.user@email.com",
+            tc_kimlik: "98765432109",
+            birth_date: "1995-01-01",
+            current_package_id: "PKG001",
+            address: "Test Mahallesi, Test Caddesi No:123",
+            city: "Test",
+          };
+
+          const response = await fetch(`${API_BASE}/api/v1/users`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(userData),
+          });
+
+          const data = await response.json();
+          addResult("POST User - Success", true, data);
+        } catch (error) {
+          addResult("POST User - Error", false, { error: error.message });
+        }
+      }
+
+      // Show current origin
+      document.addEventListener("DOMContentLoaded", function () {
+        const originDiv = document.createElement("div");
+        originDiv.innerHTML = `<p><strong>Current Origin:</strong> ${window.location.origin}</p>`;
+        document.body.insertBefore(originDiv, resultsDiv);
+      });
+    </script>
+  </body>
+</html>
