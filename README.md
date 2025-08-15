@@ -95,8 +95,9 @@ Ayrıca erişilebilirlik ilkesi gözetilerek geliştirilen sistem, toplumun tüm
 - function_calling()             # Harici API fonksiyon çağrısı
 ```
 
-## Repo Yapısı
+## 📂 Repo Yapısı
 
+```plaintext
 TurkLogos-SenaryoKategorisi-main/
 │
 ├── .gitignore
@@ -108,10 +109,10 @@ TurkLogos-SenaryoKategorisi-main/
 ├── console_chat.py
 │
 ├── data/
-│ ├── FAQ.txt
-│ ├── campaigns.txt
-│ ├── packages.txt
-│ └── policies.txt
+│   ├── FAQ.txt
+│   ├── campaigns.txt
+│   ├── packages.txt
+│   └── policies.txt
 │
 ├── docker-compose.yml
 ├── env.example
@@ -120,30 +121,30 @@ TurkLogos-SenaryoKategorisi-main/
 ├── generate_diagram.py
 │
 ├── graph/
-│ ├── chains/
-│ │ ├── answer_grader.py
-│ │ ├── generation_chain.py
-│ │ ├── hallucination_grader.py
-│ │ ├── question_grader.py
-│ │ ├── retrieval_grader.py
-│ │ └── router.py
-│ │
-│ ├── memory/
-│ │ ├── memory_nodes.py
-│ │ └── redis_client.py
-│ │
-│ ├── nodes/
-│ │ ├── function_calls.py
-│ │ ├── generation.py
-│ │ ├── grade_answer.py
-│ │ ├── grade_documents.py
-│ │ ├── grade_questions.py
-│ │ ├── reject_question.py
-│ │ ├── retrieve.py
-│ │ └── route_question.py
-│ │
-│ ├── graph.py
-│ └── state.py
+│   ├── chains/
+│   │   ├── answer_grader.py
+│   │   ├── generation_chain.py
+│   │   ├── hallucination_grader.py
+│   │   ├── question_grader.py
+│   │   ├── retrieval_grader.py
+│   │   └── router.py
+│   │
+│   ├── memory/
+│   │   ├── memory_nodes.py
+│   │   └── redis_client.py
+│   │
+│   ├── nodes/
+│   │   ├── function_calls.py
+│   │   ├── generation.py
+│   │   ├── grade_answer.py
+│   │   ├── grade_documents.py
+│   │   ├── grade_questions.py
+│   │   ├── reject_question.py
+│   │   ├── retrieve.py
+│   │   └── route_question.py
+│   │
+│   ├── graph.py
+│   └── state.py
 │
 ├── ingestion.py
 ├── init-pgvector.sql
@@ -157,8 +158,7 @@ TurkLogos-SenaryoKategorisi-main/
 ├── test_pgvector.py
 │
 └── utils/
-└── clear_cache.py
-
+    └── clear_cache.py
 
 ---
 
