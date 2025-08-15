@@ -74,6 +74,72 @@ Ayrıca erişilebilirlik ilkesi gözetilerek geliştirilen sistem, toplumun tüm
 -	Faturasız TL Yükleme
 -	Alakasız/Destek Dışı
 
+  ## 📂 Repo Yapısı
+
+```plaintext
+TurkLogos-SenaryoKategorisi-main/
+│
+├── .gitignore
+├── LICENSE
+├── README.md
+├── agent_architecture.png
+├── agent_architecture_diagram.png
+├── architecture.jpeg
+├── console_chat.py
+│
+├── data/
+│   ├── FAQ.txt
+│   ├── campaigns.txt
+│   ├── packages.txt
+│   └── policies.txt
+│
+├── docker-compose.yml
+├── env.example
+│
+├── generate_clean_diagram.py
+├── generate_diagram.py
+│
+├── graph/
+│   ├── chains/
+│   │   ├── answer_grader.py
+│   │   ├── generation_chain.py
+│   │   ├── hallucination_grader.py
+│   │   ├── question_grader.py
+│   │   ├── retrieval_grader.py
+│   │   └── router.py
+│   │
+│   ├── memory/
+│   │   ├── memory_nodes.py
+│   │   └── redis_client.py
+│   │
+│   ├── nodes/
+│   │   ├── function_calls.py
+│   │   ├── generation.py
+│   │   ├── grade_answer.py
+│   │   ├── grade_documents.py
+│   │   ├── grade_questions.py
+│   │   ├── reject_question.py
+│   │   ├── retrieve.py
+│   │   └── route_question.py
+│   │
+│   ├── graph.py
+│   └── state.py
+│
+├── ingestion.py
+├── init-pgvector.sql
+├── init.sql
+├── json_to_postgres.py
+│
+├── main.py
+├── requirements.txt
+│
+├── test_minimal.py
+├── test_pgvector.py
+│
+└── utils/
+    └── clear_cache.py
+
+
 
 ### **AI Tools & Capabilities**
 ```python# Kullanılabilir Araçlar
