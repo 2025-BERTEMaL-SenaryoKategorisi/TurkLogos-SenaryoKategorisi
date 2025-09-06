@@ -35,7 +35,7 @@ Ayrıca erişilebilirlik ilkesi gözetilerek geliştirilen sistem, toplumun tüm
 ## Sistem Mimarisi
 
 <p align="center">
-  <img src="./images/architecture.png" alt="Sistem Mimarisi" width="400"/>
+  <img src="./images/architecture.png" alt="Sistem Mimarisi" width="800"/>
 </p>
 
 ## AI Agent Özellikleri
