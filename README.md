@@ -10,15 +10,15 @@ Bu proje, TEKNOFEST 2025 **#BilisimVadisi2025** etkinliği kapsamında geliştir
 
 ## Ekip Bilgisi
 
-| Fotoğraf | İsim | Ünvan | Sosyal Medya |
-|---|---|---|---|
-| <img src="./images/emre_satir.jpeg" width="100"/> | Emre ŞATIR | Danışman |  |
-| <img src="./images/erdem_malkan.jpeg" width="100"/> | Erdem Altuğ MALKAN | Takım Kaptanı | [GitHub](https://github.com/altugmalkan) <br> [LinkedIn](https://www.linkedin.com/in/altuğ-malkan-80b8a4284/) |
-| <img src="./images/dilan_basboga.jpeg" width="100"/> | Dilan Elif BAŞBOĞA | Takım Üyesi | [GitHub](https://github.com/elifbasboga) <br> [LinkedIn](https://www.linkedin.com/in/dilan-elif-başboğa-573091276/) |
-| <img src="./images/ahmet_ucan.jpeg" width="100"/> | Ahmet Anıl UÇAN | Takım Üyesi | [GitHub](https://github.com/Anilf8) <br> [LinkedIn](https://www.linkedin.com/in/anıl-uçan-785336331/) |
-
+| Fotoğraf                                             | İsim               | Ünvan         | Sosyal Medya                                                                                                        |
+| ---------------------------------------------------- | ------------------ | ------------- | ------------------------------------------------------------------------------------------------------------------- |
+| <img src="./images/emre_satir.jpeg" width="100"/>    | Emre ŞATIR         | Danışman      |                                                                                                                     |
+| <img src="./images/erdem_malkan.jpeg" width="100"/>  | Erdem Altuğ MALKAN | Takım Kaptanı | [GitHub](https://github.com/altugmalkan) <br> [LinkedIn](https://www.linkedin.com/in/altuğ-malkan-80b8a4284/)       |
+| <img src="./images/dilan_basboga.jpeg" width="100"/> | Dilan Elif BAŞBOĞA | Takım Üyesi   | [GitHub](https://github.com/elifbasboga) <br> [LinkedIn](https://www.linkedin.com/in/dilan-elif-başboğa-573091276/) |
+| <img src="./images/ahmet_ucan.jpeg" width="100"/>    | Ahmet Anıl UÇAN    | Takım Üyesi   | [GitHub](https://github.com/Anilf8) <br> [LinkedIn](https://www.linkedin.com/in/anıl-uçan-785336331/)               |
 
 ## Proje Genel Bakış
+
 TürkLogos Projesi, kurumların ve işletmelerin müşteri iletişiminde yaşadığı uzun bekleme süreleri, insan hatası riski ve yüksek operasyon maliyetleri gibi temel sorunlara çözüm üretmeyi amaçlayan yapay zekâ destekli bir sistemdir.
 Proje, konuşmaları otomatik olarak anlayan, analiz eden ve yanıtlayan bir altyapı geliştirir. Bu sayede müşteri temsilcilerine bağımlılık azalır, işlem süreleri kısalır ve hatalı bilgi aktarımı en aza iner.
 Ayrıca erişilebilirlik ilkesi gözetilerek geliştirilen sistem, toplumun tüm kesimleri için daha kapsayıcı ve eşit bir iletişim deneyimi sunar.
@@ -35,48 +35,50 @@ Ayrıca erişilebilirlik ilkesi gözetilerek geliştirilen sistem, toplumun tüm
 ## Sistem Mimarisi
 
 <p align="center">
-  <img src="./images/architecture.jpeg" alt="Sistem Mimarisi" width="400"/>
+  <img src="./images/architecture.png" alt="Sistem Mimarisi" width="400"/>
 </p>
 
 ## AI Agent Özellikleri
 
 ### **LangChain Tabanlı Ajan**
+
 - **ReAct Pattern**: Reasoning + Acting yaklaşımı
 - **Tool Usage**: Dinamik araç kullanımı
 - **Memory Management**: Konuşma geçmişi yönetimi
 - **Context Awareness**: Bağlam farkındalığı
 
 ### **Desteklenen Senaryolar**
--	Yeni Hat Başvurusu
--	Teknik Destek
--	Fatura İtirazı
--	Tarife Seçimi/Değişikliği
--	Kampanya Sorgulama
--	Sözleşme Durumu Sorgulama
--	Tarife Detayları Öğrenme
--	Hattın Kapatılması/Açılması
--	Otomatik Ödeme Takibi/Talimatı
--	Cihaz 5G Uyumluluğu/Yükseltme
--	Aile Paketi
--	Kurumsal Hesaba Geçiş
--	Erişilebilirlik İhtiyacı
--	Veri Kullanımı Analizi
--	Acil Servis Talebi
--	Kayıp/Çalıntı Bildirimi
--	Cihaz Kampanyası
--	Ek Paket Satın Alma
--	Şikayet/Memnuniyet
--	Doğrudan Fatura Ödeme, Kolay
--	Ek Paket Satın Alma
--	Şikayet/Memnuniyet
--	Doğrudan Fatura Ödeme
--	Kişisel Bilgi Güncelleme
--	Faturasız TL Yükleme
--	Alakasız/Destek Dışı
 
-  ## 📂 Repo Yapısı
+- Yeni Hat Başvurusu
+- Teknik Destek
+- Fatura İtirazı
+- Tarife Seçimi/Değişikliği
+- Kampanya Sorgulama
+- Sözleşme Durumu Sorgulama
+- Tarife Detayları Öğrenme
+- Hattın Kapatılması/Açılması
+- Otomatik Ödeme Takibi/Talimatı
+- Cihaz 5G Uyumluluğu/Yükseltme
+- Aile Paketi
+- Kurumsal Hesaba Geçiş
+- Erişilebilirlik İhtiyacı
+- Veri Kullanımı Analizi
+- Acil Servis Talebi
+- Kayıp/Çalıntı Bildirimi
+- Cihaz Kampanyası
+- Ek Paket Satın Alma
+- Şikayet/Memnuniyet
+- Doğrudan Fatura Ödeme, Kolay
+- Ek Paket Satın Alma
+- Şikayet/Memnuniyet
+- Doğrudan Fatura Ödeme
+- Kişisel Bilgi Güncelleme
+- Faturasız TL Yükleme
+- Alakasız/Destek Dışı
 
-```plaintext
+## 📂 Repo Yapısı
+
+````plaintext
 TurkLogos-SenaryoKategorisi-main/
 │
 ├── .gitignore
@@ -159,11 +161,12 @@ TurkLogos-SenaryoKategorisi-main/
 - document_ingestion()           # Verilerin ChromaDB’ye işlenmesi
 - semantic_search()              # Vektör tabanlı semantik arama
 - function_calling()             # Harici API fonksiyon çağrısı
-```
+````
 
 ## Teknoloji Stack
 
 ### **Backend (AI Agent)**
+
 - **FastAPI**: Modern Python web framework
 - **JavaScript**: Frontend ve backend arasında dinamik etkileşim, kullanıcı arayüzünde interaktif özellikler sağlama
 - **LangChain + LangGraph**: AI agent ve LLM orchestration
@@ -174,6 +177,7 @@ TurkLogos-SenaryoKategorisi-main/
 - **WebSockets**: Real-time communication
 
 ### **Frontend (Voice Interface)**
+
 - **React 18 + TypeScript**: Modern UI framework
 - **Vite**: Development ve build tool
 - **OpenAI Whisper**: Speech-to-Text model
@@ -181,16 +185,17 @@ TurkLogos-SenaryoKategorisi-main/
 - **React Query**: State management
 
 ### **DevOps & Infrastructure**
+
 - **Docker**: Containerization
 - **Docker Compose**: Multi-service orchestration (PostgreSQL, Redis, Ollama, API, Frontend)
 - **Nginx**: Reverse proxy
 - **Prometheus**: Monitoring (planned)
 - **WebSockets**: Real-time communication
 
-
 ## Kurulum ve Çalıştırma
 
 ### **Ön Gereksinimler**
+
 ```bash
 # Sistem gereksinimleri
 - Docker & Docker Compose
@@ -200,6 +205,7 @@ TurkLogos-SenaryoKategorisi-main/
 ```
 
 ### **Hızlı Başlangıç (Docker)**
+
 ```bash
 # 1. Projeyi klonlayın
 git clone https://github.com/2025-BERTEMaL-SenaryoKategorisi/SenaryoKategorisi-TurkLogos.git
@@ -226,6 +232,7 @@ docker run -p 8081:80 turklogos-frontend
 ### **Manuel Kurulum**
 
 #### **AI Agent Backend:**
+
 ```bash
 cd SenaryoKategorisi-TurkLogos-demo-altug
 
@@ -249,6 +256,7 @@ uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 #### **Voice Interface:**
+
 ```bash
 # Docker ile otomatik çalışır (port 3000)
 # Manuel için:
@@ -270,6 +278,7 @@ npm run dev  # Port 8081
 ## API Testing
 
 ### **AI Agent Endpoints**
+
 ```bash
 # Health Check
 curl http://localhost:8000/health
@@ -289,6 +298,7 @@ curl -X POST "http://localhost:8000/auth/authenticate" \
 ```
 
 ### **Voice Interface Test**
+
 ```bash
 # Whisper STT Health
 curl http://localhost:5001/health
@@ -298,11 +308,10 @@ curl http://localhost:5001/health
 # http://localhost:8081 - Development server (Manuel)
 ```
 
-
-
 ## Konfigürasyon
 
 ### **AI Agent Ayarları (.env)**
+
 ```bash
 # Database
 DATABASE_URL=postgresql://postgres:4Lt0g@localhost:5433/turklogos_db
@@ -327,14 +336,15 @@ COLLECT_METRICS=true
 ```
 
 ### **Frontend Ayarları**
+
 ```typescript
 // API endpoints (src/lib/whisper-stt.ts)
-const API_BASE_URL = 'http://localhost:5001';  // Whisper STT
-const AGENT_API_URL = 'http://localhost:8000'; // AI Agent
+const API_BASE_URL = "http://localhost:5001"; // Whisper STT
+const AGENT_API_URL = "http://localhost:8000"; // AI Agent
 
 // Ollama Configuration
-const OLLAMA_BASE_URL = 'http://localhost:11434';
-const OLLAMA_MODEL = 'llama3.1:8b';
+const OLLAMA_BASE_URL = "http://localhost:11434";
+const OLLAMA_MODEL = "llama3.1:8b";
 ```
 
 ## Güvenlik
@@ -344,8 +354,6 @@ const OLLAMA_MODEL = 'llama3.1:8b';
 - **Input Validation**: SQL injection prevention
 - **Rate Limiting**: API abuse protection
 - **Audit Logging**: Complete conversation tracking
-
-
 
 ## Etiketler
 
